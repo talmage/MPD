@@ -70,3 +70,9 @@ jobs:
           export JAVA_HOME=$JAVA_HOME_17_X64
           ./gradlew assembleDebug
 
+      - id: upload_artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: arm64-v8a-apks
+          path: android/app/build/outputs/apk/arm64-v8a/
+  
